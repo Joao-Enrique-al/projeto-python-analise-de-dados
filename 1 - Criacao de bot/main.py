@@ -8,25 +8,26 @@ pyautogui.press("enter")
 
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("enter")
-time.sleep(3)
+time.sleep(4)
 
 
-pyautogui.click(x=630, y=372)   
-
+pyautogui.click(x=630, y=372)       
+ 
 pyautogui.write("teste@gmail.com")
 pyautogui.press("tab")
-pyautogui.write("sua senha")
-pyautogui.click(x=674, y=537)
-time.sleep(3)
-
+pyautogui.write("Sua senha")    
+pyautogui.press("tab")
+pyautogui.press("enter")
+pyautogui.press("enter")
+time.sleep(5)
 import pandas as pd
 
-tabela = pd.read_csv("produtos.csv")
+tabela = pd.read_csv("1 - Criacao de bot/produtos.csv") 
 
 print(tabela)
 
 for linha in tabela.index:
-    pyautogui.click(x=653, y=294)
+    pyautogui.click(x=541, y=260)
     codigo = tabela.loc[linha, "codigo"]
     pyautogui.write(str(codigo))
     pyautogui.press("tab")
